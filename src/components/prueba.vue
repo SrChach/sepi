@@ -16,6 +16,10 @@
 		<button @click="get_by_id_2(3)">
 			Getter que obtiene un valor por su ID
 		</button>
+		<br><br>
+		<button @click="nuevo_todo">
+			Añadir una tarea, pasando un objeto
+		</button>
 	</div>
 </template>
 
@@ -42,6 +46,10 @@
 			get_by_id_2(id){
 				console.log('Getter al que se le pasa un parámetro:')
 				console.log( this.$store.getters.get_todos_by_id(id) )
+			},
+			nuevo_todo(){
+				this.$store.commit('add_todo', { text: 'Tarea generada', done: false })
+				console.log(this.$store.state.to_do)
 			}
 
 		}

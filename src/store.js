@@ -7,6 +7,7 @@ export default new Vuex.Store({
 	// State contiene las propiedades sobre las que trabajaremos globalmente
 	state: {
 		count: 0,
+		max_id_todo: 3,
 		to_do: [
 			{ id: 1, text: 'Una tarea hecha', done: true },
 			{ id: 2, text: 'Una tarea fallida', done: false },
@@ -31,7 +32,17 @@ export default new Vuex.Store({
 	mutations: {
 		increment(state) {
 			state.count++
+		},
+		// Las mutaciones pueden recibir datos en un 'payload' (normalmente un objeto) y trabajar con ellos
+		add_todo(state, payload){
+			state.max_id_todo++
+			state.to_do.push({
+				id: state.max_id_todo,
+				text: payload.text,
+				done: payload.done
+			})
 		}
+
 	},
 	actions: {
 
