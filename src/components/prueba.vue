@@ -12,6 +12,10 @@
 		<button @click="getter_getter">
 			Getter que obtiene datos de otro getter
 		</button>
+		<br><br>
+		<button @click="get_by_id_2(3)">
+			Getter que obtiene un valor por su ID
+		</button>
 	</div>
 </template>
 
@@ -33,6 +37,11 @@
 			},
 			getter_getter(){
 				console.log(`Desde getter que obtiene datos de otro getter: ${this.$store.getters.done_todos_count}`)
+			},
+			// Devuelve algo de los getters, recibiendo un id como parámetro
+			get_by_id_2(id){
+				console.log('Getter al que se le pasa un parámetro:')
+				console.log( this.$store.getters.get_todos_by_id(id) )
 			}
 
 		}
