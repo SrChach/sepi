@@ -20,6 +20,13 @@
 		<button @click="nuevo_todo">
 			Añadir una tarea, pasando un objeto
 		</button>
+		<br><br>
+		<div>
+			{{ $store.state.count }} 
+			<button @click="$store.commit('increment')">+</button>
+			<button @click="$store.commit('decrement')">-</button>
+			<button @click="actionAsync">aber 7u7r</button>
+		</div>
 	</div>
 </template>
 
@@ -50,6 +57,9 @@
 			nuevo_todo(){
 				this.$store.commit('add_todo', { text: 'Tarea generada', done: false })
 				console.log(this.$store.state.to_do)
+			},
+			actionAsync(){
+				this.$store.dispatch('incrementAsync')
 			}
 
 		}

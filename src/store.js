@@ -33,6 +33,9 @@ export default new Vuex.Store({
 		increment(state) {
 			state.count++
 		},
+		decrement(state) {
+			state.count--
+		},
 		// Las mutaciones pueden recibir datos en un 'payload' (normalmente un objeto) y trabajar con ellos
 		add_todo(state, payload){
 			state.max_id_todo++
@@ -45,7 +48,17 @@ export default new Vuex.Store({
 
 	},
 	actions: {
+		/*	increment(context) {
+		 *		context.commit('increment')
+		 *	} // Es lo mismo que
+		 */
+		incrementAsync({ commit }){
+			setTimeout( () => {
+				commit('increment')
+			}, 5000)
+		}
 
+		
 	},
 	modules: {
 
