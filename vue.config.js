@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
 	devServer: {
 		port: 8080, // Puerto que escucha de nuestra vue-app (Aparentemente no necesario)
@@ -12,6 +14,13 @@ module.exports = {
 				target: 'http://127.0.0.1/',
 				pathRewrite: {'^/api/': '/'},
 				secure: false // (Aparentemente no necesario)
+			}
+		}
+	},
+	configureWebpack: {
+		resolve: {
+			alias: {
+				'bootstrap-components': path.resolve(__dirname, 'node_modules/bootstrap-vue/es/components')
 			}
 		}
 	}

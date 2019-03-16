@@ -1,12 +1,33 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<div id="app">
+  <b-navbar toggleable="lg" type="dark" variant="info" :sticky="true">
+    <b-navbar-brand>SEPI - ESIME</b-navbar-brand>
+  </b-navbar>
+  <router-view/>
+  <b-navbar toggleable="lg" type="dark" variant="info" fixed="bottom">
+    <b-navbar-nav>
+      <b-nav-item href="/About">Acerca de</b-nav-item>
+      <b-nav-item href="/TyC">Términos y condiciones</b-nav-item>
+    </b-navbar-nav>
+  </b-navbar>
+</div>
 </template>
+
+<script>
+import BNavbar from "bootstrap-components/navbar/navbar";
+import BNavbarBrand from "bootstrap-components/navbar/navbar-brand";
+import BNavbarNav from "bootstrap-components/navbar/navbar-nav";
+
+export default {
+  components: {
+    "b-navbar": BNavbar,
+    "b-navbar-brand": BNavbarBrand,
+    "b-navbar-nav": BNavbarNav
+  }
+}
+
+</script>
+
 
 <style lang="scss">
 #app {
@@ -15,15 +36,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
