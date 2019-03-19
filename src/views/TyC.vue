@@ -1,11 +1,12 @@
 <template>
-<div>
-	<h1>Gracias por usar esta aplicación</h1>
-	<h3>Usted acepta los siguientes términos y condiciones al usar esta aplicación.</h3>
+<b-container class="text-center">
+	<h3>Gracias por usar esta aplicación.</h3>
+	<h5>Usted acepta los siguientes términos y condiciones al usar esta aplicación:</h5>
 	<p>{{ terminos }}</p>
-</div>
+</b-container>
 </template>
 <script>
+
 export default {
 	data(){
 		return {

@@ -22,6 +22,16 @@ export default new Router({
       path: '/tyc',
       name: 'tyc',
       component: () => import(/* webpackChunkName: "tyc" */ './views/TyC.vue')
+    },
+    {
+      path: '/iniciar',
+      name: 'iniciar',
+      component: () => import(/* webpackChunkName: "iniciosesion" */ './views/InicioSesion.vue')
+    },
+    {
+      path: '/registrar',
+      name: 'registrar',
+      component: () => import(/* webpackChunkName: "registro" */ './views/Registro.vue')
     }
   ]
 })

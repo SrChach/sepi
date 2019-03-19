@@ -1,9 +1,9 @@
 <template>
-  <div class="about">
+  <b-container class="about text-center">
     <h1>Acerca de</h1>
     <button @click="hacia_api">Hacia API</button>
     <button @click="hacia_raiz">hacia "/"</button>
-  </div>
+  </b-container>
 </template>
 
 
