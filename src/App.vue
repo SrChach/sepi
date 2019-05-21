@@ -21,6 +21,9 @@
     <b-navbar-nav class="ml-auto">
       <b-nav-item to="/tyc">Términos y condiciones</b-nav-item>
     </b-navbar-nav>
+    <b-navbar-nav class="ml-auto">
+      <b-nav-item to="/signature">Componente de firma</b-nav-item>
+    </b-navbar-nav>
   </b-navbar>
 </div>
 </template>

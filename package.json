@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.14",
+    "pdfmake": "^0.1.56",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
+    "vue-signature-pad": "^1.1.9-beta.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
