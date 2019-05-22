@@ -6,7 +6,7 @@
 					<VueSignaturePad
 						id="signature"
 						width="100%"
-						height="500px"
+						height="300px"
 						ref="signaturePad"
 					/>
 				</div>
